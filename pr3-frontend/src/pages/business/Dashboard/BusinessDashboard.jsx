@@ -161,7 +161,29 @@ const BusinessDashboard = () => {
                         <td><strong>#{o.order_number || o.id}</strong></td>
                         <td>{new Date(o.createdAt || o.created_at).toLocaleDateString()}</td>
                         <td>
-                          <span className={`pr3-badge ${badgeClass}`}>{displayStatus}</span>
+                          <span style={{
+                            display: 'inline-block',
+                            padding: '0.28rem 0.75rem',
+                            borderRadius: '999px',
+                            fontSize: '0.78rem',
+                            fontWeight: 800,
+                            textTransform: 'uppercase',
+                            letterSpacing: '0.05em',
+                            background: displayStatus === 'cancelled' ? '#fdf0ef'
+                              : displayStatus === 'delivered' ? '#edf7ed'
+                              : displayStatus === 'processing' ? '#fff3e0'
+                              : '#fff8f0',
+                            color: displayStatus === 'cancelled' ? '#c0392b'
+                              : displayStatus === 'delivered' ? '#2d7a2d'
+                              : displayStatus === 'processing' ? '#e65100'
+                              : '#8a6000',
+                            border: displayStatus === 'cancelled' ? '1.5px solid #e57373'
+                              : displayStatus === 'delivered' ? '1.5px solid #81c784'
+                              : displayStatus === 'processing' ? '1.5px solid #ffb74d'
+                              : '1.5px solid #ffc107',
+                          }}>
+                            {displayStatus}
+                          </span>
                         </td>
                         <td style={{ fontWeight: 800 }}>${parseFloat(o.total_amount || o.totalAmount || 0).toFixed(2)}</td>
                         <td>

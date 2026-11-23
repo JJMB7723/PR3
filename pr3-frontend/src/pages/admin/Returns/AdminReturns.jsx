@@ -349,7 +349,7 @@ const AdminReturns = () => {
                       </td>
 
                       {/* Problem & Request */}
-                      <td style={{ minWidth: '240px', maxWidth: '340px' }}>
+                      <td style={{ minWidth: '280px', maxWidth: '400px', verticalAlign: 'top', padding: '1rem 0.85rem' }}>
                         {/* Resolution Tag */}
                         <div style={{ marginBottom: '0.45rem' }}>
                           {parsed.isReplace && (
@@ -375,9 +375,9 @@ const AdminReturns = () => {
                             fontSize: '0.88rem',
                             fontWeight: 600,
                             color: '#1a1a1a',
-                            lineHeight: 1.45,
+                            lineHeight: 1.55,
                             background: '#faf8f7',
-                            padding: '0.5rem 0.75rem',
+                            padding: '0.65rem 0.9rem',
                             borderRadius: '6px',
                             border: '1px solid #eee5e0',
                           }}
@@ -415,7 +415,7 @@ const AdminReturns = () => {
                               <div
                                 key={lIdx}
                                 style={{
-                                  fontSize: '0.76rem',
+                                  fontSize: '0.8rem',
                                   color: '#4A0F14',
                                   background: '#fffaf8',
                                   padding: '0.25rem 0.55rem',
